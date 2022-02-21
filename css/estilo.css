@@ -4,15 +4,67 @@
   padding: 0;
   font-family: 'Raleway', sans-serif; }
 
+/***********************************************
+Exted y Mixin
+/***********************************************/
+/*EXTEND*/
+.detalle, .detalle2 {
+  background-color: whitesmoke;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 65%; }
+
+.detalle2 {
+  margin-right: 75%; }
+
+/*MIXIN*/
+/*Esta clase le pertenece a los videos de you tube de los HTML*/
+.video {
+  width: 660px;
+  height: 415px; }
+
+/*Esta clase le pertecene a los mapas de los HTML*/
+.map {
+  width: 390px;
+  height: 290px; }
+
+/*aplico el MAPA en cuadro de medidas */
+/*Lista utilizando el MAPA*/
+.tr-primer-fila {
+  background-color: #4f4fc2; }
+
+.tr-segunda-fila {
+  background-color: #3e3e94; }
+
+.tr-tercer-fila {
+  background-color: #2a417e; }
+
+.tr-cuarta-fila {
+  background-color: rgba(56, 212, 56, 0.671); }
+
+.tr-quinta-fila {
+  background-color: rgba(82, 110, 15, 0.767); }
+
+.tr-sexta-fila {
+  background-color: rgba(93, 110, 31, 0.658); }
+
 /* este grid es de el index*/
 #gridArea {
   display: grid;
-  grid-template-areas: "cabecera cabecera " "imag imag" "cont formu" "pie pie"; }
+  grid-template-areas: "cabecera cabecera "
+ "imag imag"
+ "cont formu"
+ "pie pie"; }
 
 /*este grid es de las otras paginas */
 .gridArea {
   display: grid;
-  grid-template-areas: "cabecera cabecera cabecera" "imag imag imag" "video video video" "cont cont mapa" "pie pie pie";
+  grid-template-areas: "cabecera cabecera cabecera"
+ "imag imag imag"
+ "video video video"
+ "cont cont mapa"
+ "pie pie pie";
   grid-template-columns: 30% 30% auto; }
 
 header {
@@ -62,7 +114,20 @@ main {
     height: 700px; }
 
 aside {
-  grid-area: cont; }
+  grid-area: cont;
+  /* Estilos de listas*/ }
+  aside .texto {
+    background-image: linear-gradient(white, gray);
+    margin: 10px 30% 10px 90px;
+    padding: 6px 6px 6px 25px; }
+  aside .estiloLista {
+    list-style-type: disc;
+    font-weight: bold; }
+  aside .paquetes {
+    background-color: royalblue;
+    margin-left: 40px;
+    margin-right: 70%;
+    padding-left: 15px; }
 
 form {
   grid-area: formu;
@@ -70,20 +135,7 @@ form {
   margin-bottom: 40px; }
 
 article {
-  grid-area: video;
-  /* Estilos de listas*/ }
-  article .texto {
-    background-image: linear-gradient(white, gray);
-    margin: 10px 30% 10px 90px;
-    padding: 6px 6px 6px 25px; }
-  article .estiloLista {
-    list-style-type: disc;
-    font-weight: bold; }
-  article .paquetes {
-    background-color: royalblue;
-    margin-left: 40px;
-    margin-right: 70%;
-    padding-left: 15px; }
+  grid-area: video; }
 
 section {
   grid-area: mapa; }
@@ -147,20 +199,6 @@ fieldset {
   background-image: url(../imagenes/quebradaDeHumahuaca2.png.jpg);
   background-size: 100%; }
 
-.detalle {
-  background-color: whitesmoke;
-  font-weight: bold;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 65%; }
-
-.detalle2 {
-  background-color: whitesmoke;
-  margin-right: 75%;
-  font-weight: bold;
-  margin-top: 5px;
-  margin-bottom: 5px; }
-
 legend {
   margin: 15px;
   padding: 7px;
@@ -169,6 +207,9 @@ legend {
   font-size: 15px; }
 
 /*FINAL DE LA PAGINA*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
 /*ESTE PERTENECE A LOS OTROS HTML*/
 h2 {
   text-align-last: center;
@@ -223,7 +264,9 @@ h2 {
   margin-bottom: 40px;
   background-color: cadetblue;
   font-weight: bold;
-  border: 3px solid black; }
+  border: 3px solid black; 
+  text-align: center;
+}
 
 th,
 td {
@@ -235,14 +278,26 @@ td {
   list-style-type: disc;
   font-weight: bold; }
 
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
 /* RESPONSIVE TABLET*/
 @media (min-width: 600px) and (max-width: 1023px) {
   #gridArea {
     display: grid;
-    grid-template-areas: " cabecera" " imag" " cont" " formu" " pie"; }
+    grid-template-areas: " cabecera"
+ " imag"
+ " cont"
+ " formu"
+ " pie"; }
   .gridArea {
     display: grid;
-    grid-template-areas: "cabecera " "imag " "video" "cont" "mapa" "pie";
+    grid-template-areas: "cabecera "
+ "imag "
+ "video"
+ "cont"
+ "mapa"
+ "pie";
     grid-template-columns: auto; }
   header {
     grid-area: cabecera;
@@ -380,14 +435,26 @@ td {
     list-style-type: disc;
     font-weight: bold; } }
 
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
 /* RESPONSIVE SMARTPHONE*/
 @media (max-width: 599px) {
   #gridArea {
     display: grid;
-    grid-template-areas: " cabecera" " imag" " cont" " formu" " pie"; }
+    grid-template-areas: " cabecera"
+ " imag"
+ " cont"
+ " formu"
+ " pie"; }
   .gridArea {
     display: grid;
-    grid-template-areas: "cabecera " "imag " "video" "cont" "mapa" "pie";
+    grid-template-areas: "cabecera "
+ "imag "
+ "video"
+ "cont"
+ "mapa"
+ "pie";
     grid-template-columns: auto; }
   article {
     grid-area: video; }

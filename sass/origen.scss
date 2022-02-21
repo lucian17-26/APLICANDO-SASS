@@ -1,5 +1,7 @@
 /*esto es un comentario*/
 @import "margen";
+@import "exted-mixin";
+@import "each";
 
 /* este grid es de el index*/
 #gridArea {
@@ -83,6 +85,22 @@ main {
 
 aside {
     grid-area: cont;
+    .texto {
+        background-image: linear-gradient(white, gray);
+        margin: 10px 30% 10px 90px;
+        padding: 6px 6px 6px 25px;
+    }
+    /* Estilos de listas*/
+    .estiloLista{
+    list-style-type: disc;
+    font-weight: bold;
+    }
+    .paquetes {
+    background-color: royalblue;
+    margin-left: 40px;
+    margin-right: 70%;
+    padding-left: 15px;
+    }
 }
 
 form {
@@ -93,22 +111,7 @@ form {
 
 article {
     grid-area: video;
-    .texto {
-        background-image: linear-gradient(white, gray);
-        margin: 10px 30% 10px 90px;
-        padding: 6px 6px 6px 25px;
-    }
-    /* Estilos de listas*/
-    .estiloLista {
-    list-style-type: disc;
-    font-weight: bold;
-    }
-    .paquetes {
-    background-color: royalblue;
-    margin-left: 40px;
-    margin-right: 70%;
-    padding-left: 15px;
-}
+    
 }
 
 section {
@@ -152,6 +155,7 @@ body {
 }
 
 
+
 .padreFlex {
     display: flex;
     justify-content: space-evenly;
@@ -167,14 +171,7 @@ body {
     padding: 15px;
 }
 
-
-
-
-
 /* CONTENIDO DE LA PAGINA*/
-
-
-
 
 /* Relleno de pagina*/
 .relleno {
@@ -201,22 +198,6 @@ fieldset {
     background-size: 100%;
 }
 
-.detalle {
-    background-color: whitesmoke;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 65%;
-}
-
-.detalle2 {
-    background-color: whitesmoke;
-    margin-right: 75%;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-}
 
 legend {
     margin: 15px;
@@ -228,13 +209,25 @@ legend {
 
 /*FINAL DE LA PAGINA*/
 
-
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
 
 /*ESTE PERTENECE A LOS OTROS HTML*/
 @import "paginassecundarias";
 
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
+
 /* RESPONSIVE TABLET*/
 @import "tablet";
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
 
 /* RESPONSIVE SMARTPHONE*/
 @import "smartphone";
